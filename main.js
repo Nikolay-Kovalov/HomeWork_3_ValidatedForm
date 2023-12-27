@@ -23,9 +23,10 @@ function getFromLocalStorage(key) {
 
 function renderDataFromLS() {
   const data = getFromLocalStorage('results');
-  data.forEach(({name,email, phone,sports,size}) => {
+  if(data !== null){ data.forEach(({name,email, phone,sports,size}) => {
     renderResult(name, email, phone, sports, size)
-  });
+  });}
+ 
 }
 
 renderDataFromLS();
