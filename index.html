@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <h1>Fill in this application form,please</h1>
+        <label for="1"> Name </label>
+        <input
+          type="text"
+          name="name"
+          class="input"
+          id="1"
+          placeholder="Alex"
+        />
+        <label for="2">Email </label>
+        <input
+          type="text"
+          name="email"
+          class="input"
+          id="2"
+          placeholder="examle@gmail.com"
+        />
+        <label for="3"> Phone number </label>
+        <input
+          type="tel"
+          name="phone"
+          class="input"
+          id="3"
+          placeholder="+380994567329"
+        />
+        <h2>Mark your favoutite sports, please</h2>
+        <div class="checkbox-wrapper">
+          <label
+            >Football
+            <input
+              name="football"
+              class="checkbox"
+              type="checkbox"
+              id="check1"
+              value="Football"
+              checked
+          /></label>
+          <label
+            >Basketball
+            <input
+              name="basketball"
+              class="checkbox"
+              type="checkbox"
+              id="check2"
+              value="Basketball"
+          /></label>
+          <label
+            >Volleyball
+            <input
+              name="volleyball"
+              class="checkbox"
+              type="checkbox"
+              id="check3"
+              value="Volleyball"
+          /></label>
+          <label
+            >Handball
+            <input
+              name="handball"
+              class="checkbox"
+              type="checkbox"
+              id="check4"
+              value="Handball"
+          /></label>
+        </div>
+        <h2>Choose your foot size, please</h2>
+        <div class="radio-wrapper">
+          <label class="radio-label"
+            >38-40<input
+              type="radio"
+              name="size"
+              value="38-40"
+              id="radio1"
+              checked
+          /></label>
+          <label class="radio-label"
+            >40-42 <input type="radio" name="size" value="40-42" id="radio2"
+          /></label>
+          <label class="radio-label"
+            >42-44<input type="radio" name="size" value="42-44" id="radio3"
+          /></label>
+          <label class="radio-label"
+            >44-46<input type="radio" name="size" value="44-46" id="radio4"
+          /></label>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <div class="result"></div>
+    </div>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
