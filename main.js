@@ -39,23 +39,6 @@ function onFormSubmit(evt) {
   const sports = getCheckedCheckboxes().join(', ');
   const size = evt.currentTarget.elements.size.value;
  
-
-
-  // if (name.length < 6) {
-  //   alert('Name should contain six characters at least');
-  //   return
-  // }
- 
-  // const regExpemail = /[@]/gi
-
-  // if (!regExpemail.test(`${email}`)) {
-  //   alert(`Email should contain "@" and "."` )
-  // }
-
-  // const regExp = /^\+\d{1,3}\d{10}$/;
-  // if (!regExp.test(`${phone}`)) {
-  //       alert('Use this phone format: +380997654327');
-  // }
   const resultsObject = {
     name,email,phone,sports,size,
   }
@@ -67,6 +50,11 @@ function onFormSubmit(evt) {
   localStorage.setItem('results', JSON.stringify(arrForResults))
 
   evt.currentTarget.reset();
+  evt.currentTarget.name.classList.remove('valid');
+  evt.currentTarget.email.classList.remove('valid');
+    evt.currentTarget.phone.classList.remove('valid');
+  
+
 }
 
 form.elements.name.addEventListener('focusin', (evt) => {
@@ -76,10 +64,9 @@ form.elements.name.addEventListener('focusin', (evt) => {
        form.elements.name.nextElementSibling.remove()
   }
   
-  if (form.elements.phone.value) {
-  console.log('bhjbjbv')
-  submitBtn.classList.remove('disabled')
-  }
+  // if (form.elements.phone.value) {
+  // submitBtn.classList.remove('disabled')
+  // }
     if (form.elements.name.classList.contains('unvalid') && form.elements.email.classList.contains('unvalid') && form.elements.name.classList.contains('unvalid')) {
   submitBtn.classList.add('disabled')
 }
